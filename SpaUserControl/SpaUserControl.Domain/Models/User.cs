@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SpaUserControl.Common.Validation;
 
 namespace SpaUserControl.Domain.Models
 {
@@ -10,8 +7,8 @@ namespace SpaUserControl.Domain.Models
     {        
         public User(string name ,string email)
         {
-            this.Name = name;
-            this.Email = email;
+            Name = name;
+            Email = email;
         }
 
         public int Id { get; private set; }
@@ -21,10 +18,11 @@ namespace SpaUserControl.Domain.Models
 
         public void SetPassword(string password, string confirmPassword)
         {
-            if (String.IsNullOrEmpty(password))
-            {
-                throw new Exception("Senha inválida");
-            }
+            AssertionConcern.AssertArgumentNotNull(password, "Senha Inválida");
+            AssertionConcern.AssertArgumentNotNull(confirmPassword, "Confirmação de senha inválida");
+            AssertionConcern.AssertArgumentEquals(password, confirmPassword, "As senhas são iguais!");
+            AssertionConcern.AssertArgumentLength(password, 6, 20, "Senhas inválidas");
+            this.Password = password;
         }
 
 
