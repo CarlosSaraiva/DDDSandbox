@@ -56,9 +56,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SpaUserControl.Common\SpaUserControl.Common.csproj">
+      <Project>{46b1f2b9-c77d-4b56-a482-656877e4e438}</Project>
+      <Name>SpaUserControl.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SpaUserControl.Domain\SpaUserControl.Domain.csproj">
       <Project>{d9c9e12d-166b-4862-afe7-a8a7e4f83089}</Project>
       <Name>SpaUserControl.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaUserControl.Infrastructure\SpaUserControl.Infrastructure.csproj">
+      <Project>{5d13ea4a-eb08-41d2-b65b-7b8f478b4c9c}</Project>
+      <Name>SpaUserControl.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
