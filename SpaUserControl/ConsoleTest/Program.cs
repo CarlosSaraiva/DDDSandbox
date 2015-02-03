@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SpaUserControl.Domain.Models;
 
 namespace ConsoleTest
@@ -20,7 +16,7 @@ namespace ConsoleTest
             {
                 Console.WriteLine(e.Message);
             }
-            
+            user.Validate();
             Console.WriteLine(user.Name);
             Console.WriteLine(user.Password);
 
