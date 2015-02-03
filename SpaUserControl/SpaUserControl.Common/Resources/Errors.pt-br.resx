@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="InvalidEmail" xml:space="preserve">
-    <value>E-mail is invalid.</value>
+    <value>E-mail inválido.</value>
   </data>
   <data name="InvalidPassword" xml:space="preserve">
-    <value>Invalid Password!</value>
+    <value>Senha inválida!</value>
   </data>
   <data name="InvalidPasswordConfirmation" xml:space="preserve">
-    <value>Password confirmation is invalid!</value>
+    <value>Confirmação de senha inválida.</value>
   </data>
   <data name="InvalidUsername" xml:space="preserve">
-    <value>Username is invalid.</value>
+    <value>Nome de usuário inválido.</value>
   </data>
   <data name="PasswordNotMatch" xml:space="preserve">
-    <value>Password not match!</value>
+    <value>Senhas não são iguais.</value>
   </data>
 </root>
