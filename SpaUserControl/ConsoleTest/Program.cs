@@ -23,6 +23,9 @@ namespace ConsoleTest
             
             Console.WriteLine(user.Name);
             Console.WriteLine(user.Password);
+
+            user.ResetPassword();
+            Console.WriteLine(user.Password);
             Console.ReadKey();
         }
     }
