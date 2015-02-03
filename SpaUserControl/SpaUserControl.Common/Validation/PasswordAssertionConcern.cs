@@ -21,10 +21,8 @@ namespace SpaUserControl.Common.Validation
             System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
             byte[] data = md5.ComputeHash(System.Text.Encoding.Default.GetBytes(password));
             System.Text.StringBuilder sbString = new System.Text.StringBuilder();
-            foreach (byte t in data)
-            {
-                sbString.Append(t.ToString("x2"));
-            }
+            for (int i = 0; i < data.Length; i++)
+                sbString.Append(data[i].ToString("x2"));
             return sbString.ToString();
         }
 
