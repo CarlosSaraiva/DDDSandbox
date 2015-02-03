@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using SpaUserControl.Common.Resources;
 using SpaUserControl.Common.Validation;
 
