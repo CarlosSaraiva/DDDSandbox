@@ -6,7 +6,8 @@ namespace SpaUserControl.Domain.Models
 {
     public class User
     {
-        #region Constructor
+        #region Constructors
+        protected User() { }
         public User(string name, string email)
         {
             this.Id = Guid.NewGuid();
