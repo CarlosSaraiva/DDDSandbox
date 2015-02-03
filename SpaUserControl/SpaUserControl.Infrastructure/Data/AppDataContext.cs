@@ -15,6 +15,7 @@ namespace SpaUserControl.Infrastructure.Data
         public AppDataContext():base("AppConnectionString")
         {
             Configuration.LazyLoadingEnabled = false;
+            Configuration.ProxyCreationEnabled = false;
         }
         public DbSet<User> Users { get; set; }
 
