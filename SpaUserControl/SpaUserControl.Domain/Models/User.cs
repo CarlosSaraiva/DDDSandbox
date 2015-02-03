@@ -27,6 +27,12 @@ namespace SpaUserControl.Domain.Models
 
         }
 
+        public string resetPassword()
+        {
+            string password = Guid.NewGuid().ToString().Substring(0, 8);
+            this.Password = PasswordAssertionConcern.Encrypt(password);
+            return password;
+        }
 
     }
 }
