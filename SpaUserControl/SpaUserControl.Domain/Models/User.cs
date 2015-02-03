@@ -22,7 +22,8 @@ namespace SpaUserControl.Domain.Models
             AssertionConcern.AssertArgumentNotNull(confirmPassword, "Confirmação de senha inválida");
             AssertionConcern.AssertArgumentEquals(password, confirmPassword, "As senhas são iguais!");
             AssertionConcern.AssertArgumentLength(password, 6, 20, "Senhas inválidas");
-            this.Password = password;
+            this.Password = PasswordAssertionConcern.Encrypt(password);
+
         }
 
 
