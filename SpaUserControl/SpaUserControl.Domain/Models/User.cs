@@ -8,12 +8,10 @@ namespace SpaUserControl.Domain.Models
 {
     public class User
     {        
-
-        public User(string name ,string email, string password)
+        public User(string name ,string email)
         {
             this.Name = name;
             this.Email = email;
-            this.Password = password;
         }
 
         public int Id { get; private set; }
@@ -21,9 +19,14 @@ namespace SpaUserControl.Domain.Models
         public string Email { get; private set; }
         public string Password { get; private set; }
 
-        public void setPassword(string password, string confirmPassword)
+        public void SetPassword(string password, string confirmPassword)
         {
-            
+            if (String.IsNullOrEmpty(password))
+            {
+                throw new Exception("Senha inválida");
+            }
         }
+
+
     }
 }
