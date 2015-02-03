@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaUserControl.Domain", "SpaUserControl.Domain\SpaUserControl.Domain.csproj", "{D9C9E12D-166B-4862-AFE7-A8A7E4F83089}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{2466A1B0-AE79-4068-8111-35D64F7F4BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D9C9E12D-166B-4862-AFE7-A8A7E4F83089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C9E12D-166B-4862-AFE7-A8A7E4F83089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C9E12D-166B-4862-AFE7-A8A7E4F83089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2466A1B0-AE79-4068-8111-35D64F7F4BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2466A1B0-AE79-4068-8111-35D64F7F4BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2466A1B0-AE79-4068-8111-35D64F7F4BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2466A1B0-AE79-4068-8111-35D64F7F4BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
