@@ -48,6 +48,10 @@
   <ItemGroup>
     <Compile Include="Data\AppDataContext.cs" />
     <Compile Include="Data\Map\UserMap.cs" />
+    <Compile Include="Migrations\201502031924490_first.cs" />
+    <Compile Include="Migrations\201502031924490_first.Designer.cs">
+      <DependentUpon>201502031924490_first.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -61,6 +65,11 @@
       <Project>{D9C9E12D-166B-4862-AFE7-A8A7E4F83089}</Project>
       <Name>SpaUserControl.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201502031924490_first.resx">
+      <DependentUpon>201502031924490_first.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

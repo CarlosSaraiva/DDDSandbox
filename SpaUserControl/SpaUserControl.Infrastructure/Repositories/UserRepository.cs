@@ -9,7 +9,7 @@ using SpaUserControl.Infrastructure.Data;
 
 namespace SpaUserControl.Infrastructure.Repositories
 {
-    class UserRepository:IUserRepository
+    public class UserRepository:IUserRepository
     {
         private AppDataContext _context = new AppDataContext();
 
