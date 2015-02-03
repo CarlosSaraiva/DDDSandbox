@@ -5,6 +5,7 @@ using System.Runtime.Remoting;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using SpaUserControl.Common.Resources;
 
 namespace SpaUserControl.Common.Validation
 {
@@ -12,7 +13,7 @@ namespace SpaUserControl.Common.Validation
     {
         public static void AssertIsValid(string password)
         {
-            AssertionConcern.AssertArgumentNotNull(password, "");
+            AssertionConcern.AssertArgumentNotNull(password, Errors.InvalidPassword);
         }
 
         public static string Encrypt(string password)

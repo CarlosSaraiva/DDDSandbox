@@ -1,4 +1,5 @@
 ﻿using System;
+using SpaUserControl.Common.Resources;
 using SpaUserControl.Common.Validation;
 
 namespace SpaUserControl.Domain.Models
@@ -18,10 +19,10 @@ namespace SpaUserControl.Domain.Models
 
         public void SetPassword(string password, string confirmPassword)
         {
-            AssertionConcern.AssertArgumentNotNull(password, "Senha Inválida");
-            AssertionConcern.AssertArgumentNotNull(confirmPassword, "Confirmação de senha inválida");
-            AssertionConcern.AssertArgumentEquals(password, confirmPassword, "As senhas são iguais!");
-            AssertionConcern.AssertArgumentLength(password, 6, 20, "Senhas inválidas");
+            AssertionConcern.AssertArgumentNotNull(password, Errors.InvalidPassword);
+            AssertionConcern.AssertArgumentNotNull(confirmPassword, Errors.InvalidPasswordConfirmation);
+            AssertionConcern.AssertArgumentEquals(password, confirmPassword, Errors.PasswordNotMatch);
+            AssertionConcern.AssertArgumentLength(password, 6, 20, Errors.InvalidPassword);
             this.Password = PasswordAssertionConcern.Encrypt(password);
 
         }
