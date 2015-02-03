@@ -1,21 +1,31 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using SpaUserControl.Common.Resources;
 using SpaUserControl.Common.Validation;
 
 namespace SpaUserControl.Domain.Models
 {
     public class User
-    {        
-        public User(string name ,string email)
+    {
+        #region Constructor
+        public User(string name, string email)
         {
-            Name = name;
-            Email = email;
-        }
+            this.Id = Guid.NewGuid();
+            this.Name = name;
+            this.Email = email;
+        } 
+        #endregion
 
-        public int Id { get; private set; }
+        #region Properties
+
+        public Guid Id { get; private set; }
         public string Name { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
+
+        #endregion
+
+        #region Methods
 
         public void SetPassword(string password, string confirmPassword)
         {
@@ -27,12 +37,26 @@ namespace SpaUserControl.Domain.Models
 
         }
 
-        public string resetPassword()
+        public string ResetPassword()
         {
             string password = Guid.NewGuid().ToString().Substring(0, 8);
             this.Password = PasswordAssertionConcern.Encrypt(password);
             return password;
         }
+
+        public void ChangeName(string name)
+        {
+            this.Name = name;
+        }
+
+        public void Validate()
+        {
+            AssertionConcern.AssertArgumentLength(this.Name, 3, 250, Errors.InvalidUsername);
+            EmailAssertionConcern.AssertIsValid(this.Email);
+            PasswordAssertionConcern.AssertIsValid(this.Password);
+        }
+
+        #endregion
 
     }
 }
