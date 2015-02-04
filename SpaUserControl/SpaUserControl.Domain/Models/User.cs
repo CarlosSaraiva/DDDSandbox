@@ -26,7 +26,6 @@ namespace SpaUserControl.Domain.Models
         #endregion
 
         #region Methods
-
         public void SetPassword(string password, string confirmPassword)
         {
             AssertionConcern.AssertArgumentNotNull(password, Errors.InvalidPassword);
@@ -55,7 +54,6 @@ namespace SpaUserControl.Domain.Models
             EmailAssertionConcern.AssertIsValid(this.Email);
             PasswordAssertionConcern.AssertIsValid(this.Password);
         }
-
         #endregion
 
     }
