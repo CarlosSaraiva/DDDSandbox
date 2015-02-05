@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using SpaUserControl.Common.Resources;
 using SpaUserControl.Domain;
 using SpaUserControl.Domain.Contracts.Repositories;
 using SpaUserControl.Domain.Models;
@@ -10,8 +12,20 @@ namespace ConsoleTest
     {
         static void Main(string[] args)
         {
-            var user = new User("Carlos", "carlos@gmail.com");
-            user.SetPassword("12345676", "12345676");
+            Console.WriteLine(Errors.Program_Main_Nome);
+            string nome = Console.ReadLine();
+
+            Console.WriteLine(Errors.Program_Main_e_mail_);
+            string email = Console.ReadLine();            
+
+            Console.WriteLine(Errors.Program_Main_Nova_senha_);
+            string senha = Console.ReadLine();
+
+            Console.WriteLine(Errors.Program_Main_Confirme_senha_);
+            string confirmaSenha = Console.ReadLine();
+
+            var user = new User(nome, email);
+            user.SetPassword(senha, confirmaSenha);
             user.Validate();
             using (IUserRepository userRep = new UserRepository())
             {
@@ -20,8 +34,16 @@ namespace ConsoleTest
 
             using (IUserRepository userRep = new UserRepository())
             {
-                var usr = userRep.Get("carlos.saraiva@msn.com");
-                Console.WriteLine(usr.Email);
+                var usr = userRep.Get(email);
+                if (usr != null)
+                {
+                    Console.WriteLine(usr.Email + " " + usr.Name + " " + usr.Id);
+                }
+                else
+                {
+                    Console.WriteLine(Errors.Program_Main_Usuário_não_encontrado);
+                }
+                
                 Console.ReadKey();
             }
         }
