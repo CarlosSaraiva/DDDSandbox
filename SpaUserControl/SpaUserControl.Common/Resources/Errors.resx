@@ -132,4 +132,19 @@
   <data name="PasswordNotMatch" xml:space="preserve">
     <value>Password not match!</value>
   </data>
+  <data name="Program_Main_Confirme_senha_" xml:space="preserve">
+    <value>Confirme senha:</value>
+  </data>
+  <data name="Program_Main_Nova_senha_" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Program_Main_e_mail_" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="Program_Main_Nome" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Program_Main_Usuário_não_encontrado" xml:space="preserve">
+    <value>User not found</value>
+  </data>
 </root>
