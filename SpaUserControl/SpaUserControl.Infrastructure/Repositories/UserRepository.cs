@@ -13,6 +13,17 @@ namespace SpaUserControl.Infrastructure.Repositories
     {
         private AppDataContext _context = new AppDataContext();
 
+        public UserRepository(AppDataContext context)
+        {
+            this._context = context;
+        }
+                         
+//    TODO:Remove this constructor soon as Dependency injection it's fully implemented
+        public UserRepository()
+        {
+            this._context = new AppDataContext();
+        }
+
         public User Get(Guid id)
         {
             return _context.Users.FirstOrDefault(x => x.Id == id);
